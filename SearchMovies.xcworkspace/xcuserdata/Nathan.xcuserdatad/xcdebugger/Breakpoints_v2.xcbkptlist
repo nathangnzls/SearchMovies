@@ -14,24 +14,8 @@
             filePath = "SearchMovies/View/Controller/MoviesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "fetchMovies(movieName:pageNum:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "733EE506-E0F1-487E-A961-A74BE1C54917"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SearchMovies/View/Controller/MoviesViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "fetchMovies(movieName:pageNum:)"
             landmarkType = "7">
          </BreakpointContent>

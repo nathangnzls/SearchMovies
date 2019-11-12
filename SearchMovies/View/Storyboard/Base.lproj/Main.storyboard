@@ -41,12 +41,43 @@
                                     <outlet property="delegate" destination="e78-ks-HcY" id="bGC-lY-8Dz"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A8Y-kx-OWq">
+                                <rect key="frame" x="0.0" y="88" width="414" height="0.0"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Brw-gu-JPt">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="6yl-nP-IfT">
+                                            <size key="itemSize" width="50" height="50"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="e78-ks-HcY" id="34a-ZR-Vhc"/>
+                                            <outlet property="delegate" destination="e78-ks-HcY" id="u59-lg-nH0"/>
+                                        </connections>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Brw-gu-JPt" firstAttribute="leading" secondItem="A8Y-kx-OWq" secondAttribute="leading" id="JUv-2n-yOP"/>
+                                    <constraint firstItem="Brw-gu-JPt" firstAttribute="top" secondItem="A8Y-kx-OWq" secondAttribute="top" id="LC8-VP-eyE"/>
+                                    <constraint firstAttribute="bottom" secondItem="Brw-gu-JPt" secondAttribute="bottom" id="ME9-uG-5gX"/>
+                                    <constraint firstAttribute="height" id="RIf-BI-aZO"/>
+                                    <constraint firstAttribute="trailing" secondItem="Brw-gu-JPt" secondAttribute="trailing" id="evi-mw-lZu"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="hw4-35-tNc" firstAttribute="top" secondItem="0Cm-Do-dJr" secondAttribute="top" id="1t4-0A-JPd"/>
+                            <constraint firstItem="A8Y-kx-OWq" firstAttribute="leading" secondItem="0Cm-Do-dJr" secondAttribute="leading" id="9jW-eF-4uu"/>
                             <constraint firstItem="0Cm-Do-dJr" firstAttribute="bottom" secondItem="hw4-35-tNc" secondAttribute="bottom" id="ADq-O4-GEs"/>
                             <constraint firstItem="0Cm-Do-dJr" firstAttribute="trailing" secondItem="hw4-35-tNc" secondAttribute="trailing" id="BrA-bU-MI5"/>
+                            <constraint firstItem="hw4-35-tNc" firstAttribute="top" secondItem="A8Y-kx-OWq" secondAttribute="bottom" id="KKN-Ch-O7a"/>
+                            <constraint firstItem="A8Y-kx-OWq" firstAttribute="top" secondItem="0Cm-Do-dJr" secondAttribute="top" id="Xib-Sd-oju"/>
+                            <constraint firstItem="0Cm-Do-dJr" firstAttribute="trailing" secondItem="A8Y-kx-OWq" secondAttribute="trailing" id="qgA-05-eTj"/>
                             <constraint firstItem="hw4-35-tNc" firstAttribute="leading" secondItem="0Cm-Do-dJr" secondAttribute="leading" id="ulE-Pm-3n7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0Cm-Do-dJr"/>
@@ -55,6 +86,8 @@
                         <nil key="title"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="collectionView" destination="Brw-gu-JPt" id="chU-Uu-ck5"/>
+                        <outlet property="suggestionViewHolderHeight" destination="RIf-BI-aZO" id="GhQ-vo-RG2"/>
                         <outlet property="tableView" destination="hw4-35-tNc" id="LaP-2d-wOq"/>
                     </connections>
                 </viewController>

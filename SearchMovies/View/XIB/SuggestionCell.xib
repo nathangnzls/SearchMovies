@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SuggestionCollectionViewCell" id="ZSw-Xj-gCA" customClass="SuggestionCollectionViewCell" customModule="SearchMovies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="139" height="23"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="BN3-82-4qG">
+                <rect key="frame" x="0.0" y="0.0" width="139" height="23"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J9A-YA-TSG">
+                        <rect key="frame" x="0.0" y="0.0" width="139" height="23"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jo6-ML-b6g">
+                                <rect key="frame" x="4" y="4" width="131" height="15"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jo6-ML-b6g" firstAttribute="top" secondItem="J9A-YA-TSG" secondAttribute="top" constant="4" id="8w8-Ng-fT2"/>
+                            <constraint firstItem="jo6-ML-b6g" firstAttribute="leading" secondItem="J9A-YA-TSG" secondAttribute="leading" constant="4" id="WBU-a0-PpD"/>
+                            <constraint firstAttribute="trailing" secondItem="jo6-ML-b6g" secondAttribute="trailing" constant="4" id="g5I-W0-bPm"/>
+                            <constraint firstAttribute="bottom" secondItem="jo6-ML-b6g" secondAttribute="bottom" constant="4" id="lXM-Qp-DGi"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="J9A-YA-TSG" firstAttribute="top" secondItem="BN3-82-4qG" secondAttribute="top" id="FXR-fm-1hH"/>
+                    <constraint firstItem="J9A-YA-TSG" firstAttribute="leading" secondItem="BN3-82-4qG" secondAttribute="leading" id="YcW-H4-g6d"/>
+                    <constraint firstAttribute="bottom" secondItem="J9A-YA-TSG" secondAttribute="bottom" id="jdA-EL-Rdu"/>
+                    <constraint firstAttribute="trailing" secondItem="J9A-YA-TSG" secondAttribute="trailing" id="tij-PK-omq"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="139" height="23"/>
+            <connections>
+                <outlet property="suggestionBtn" destination="jo6-ML-b6g" id="8Ix-ai-20L"/>
+            </connections>
+            <point key="canvasLocation" x="196.37681159420291" y="132.25446428571428"/>
+        </collectionViewCell>
+    </objects>
+</document>

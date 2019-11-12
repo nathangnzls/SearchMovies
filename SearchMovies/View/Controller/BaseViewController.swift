@@ -9,10 +9,8 @@
 import UIKit
 
 class BaseViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     func showNoInternetAlert(){
         self.showAlert(title: alertsTitle.internetRequired, message: alertsMessage.internetRequired, handler: {

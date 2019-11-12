@@ -22,10 +22,9 @@ class APIHandler: NSObject {
     fileprivate func urlBuilder( _ request: RequestType, _ url: inout String?, _ movieName: String, _ pageNum: Int) {
         switch request {
         case .fetchMovies:
-            url = Constants.BASE_URL + Constants.PATH_MOVIES + Constants.API_KEY  + "&query=\(movieName)&page=\(pageNum)"
+            url = Constants.BASE_URL + Constants.PATH_MOVIES + Constants.API_KEY  + "&query=\(movieName.addingPercentEncoding(withAllowedCharacters: .alphanumerics)!)&page=\(pageNum)"
         }
     }
-    
     func get(request: RequestType , movieName: String, pageNum: Int ,parameters: Parameters, handler:@escaping resquestCompleted) {
         var url : String?
         urlBuilder(request, &url, movieName, pageNum)
@@ -37,7 +36,7 @@ class APIHandler: NSObject {
                 guard let httpCode = response.response?.statusCode else{
                     return handler("Unable to read response code. \n Please try again later.",nil,nil)
                 }
-                
+                //enter other possible httpcode here
                 switch httpCode{
                 case 200:
                     guard let responseDict = response.result.value as? [String: Any] else{ return handler("Serialization Error" , nil, nil)}

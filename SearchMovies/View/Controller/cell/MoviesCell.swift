@@ -12,15 +12,12 @@ protocol Bluring {
     func addBlur(_ alpha: CGFloat)
 }
 class MoviesCell: UITableViewCell {
-
     @IBOutlet weak var posterImg: UIImageView!
     @IBOutlet weak var blurredImage: UIImageView!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var releaseDateAndRatings: UILabel!
     @IBOutlet weak var overview: UILabel!
-    
     var results : Results? {
-        
         didSet{
             guard let url = URL(string: Constants.PATH_IMAGE_BASE_URL+(results?.poster_path ?? "")) else {return}
             Nuke.loadImage(with: url, into: self.posterImg)

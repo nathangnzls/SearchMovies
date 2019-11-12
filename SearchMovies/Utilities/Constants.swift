@@ -17,7 +17,22 @@ class Constants: NSObject {
 }
 struct alertsMessage{
     static let internetRequired = "An internet connection is required."
+    static let noInternetConecction = "Please Check your Internet Connection and try again"
 }
 struct alertsTitle{
     static let internetRequired = "Internet Required"
+}
+struct nibNames{
+    static let movieCell = "MovieCell"
+    static let suggestionCell = "SuggestionCell"
+}
+struct nibIds{
+    static let movieCellID = "MoviesCell"
+    static let suggestionID = "SuggestionCollectionViewCell"
+}
+struct placeHolder{
+    static let searchView = "Search movie names here"
+}
+struct loaderTitle{
+    static let loading = "Loading contents..."
 }
