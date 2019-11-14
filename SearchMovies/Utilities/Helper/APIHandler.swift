@@ -59,6 +59,6 @@ class APIHandler: NSObject {
         }
     }
     fileprivate func logRequest(_ url: String?, _ headers: HTTPHeaders?, _ parameters: Parameters) {
-        print("\n\n\nPOST REQUEST --- \nURL \(url ?? "Not available") \n\n HEADER VALUE - \n\(headers ?? [:]) \n with Params --- \n\n  \n ---- \n\n\n")
+        print("\n\n\n REQUEST --- \nURL \(url ?? "Not available") \n\n HEADER VALUE - \n\(headers ?? [:]) \n with Params --- \n\n  \n ---- \n\n\n")
     }
 }

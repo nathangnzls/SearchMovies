@@ -11,7 +11,7 @@ DEPENDENCIES:
   - SwiftSpinner
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - IQKeyboardManagerSwift
     - Nuke
@@ -23,6 +23,6 @@ SPEC CHECKSUMS:
   Nuke: 0350d346a688426e8f2331253ef28dc2fc4f6178
   SwiftSpinner: 0f15c006307f8d8bbac075638927ec1361b565d7
 
-PODFILE CHECKSUM: db0f213af4fb43ae27002182d9dc7fd51387c48c
+PODFILE CHECKSUM: 091f22ae83a6623bdc68647057e3f38c9add1a69
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.8.4

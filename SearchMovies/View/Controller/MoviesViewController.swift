@@ -15,7 +15,7 @@ class MoviesViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     var viewModel = MoviesViewModel()
     var loadMoreControl: LoadMoreControl?
-    var searchedMovie = [String]()
+    var searchedMovie = [String](repeating: "asd", count: 10)
     var index = 1
     var search = ""
     let searchController = UISearchController(searchResultsController: nil)

@@ -1,0 +1,18 @@
+//
+//  Development.xcconfig
+//  SearchMovies
+//
+//  Created by Nathan on 14/11/2019.
+//  Copyright © 2019 NJG. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+#include "Pods/Target Support Files/Pods-SearchMovies/Pods-SearchMovies.development.xcconfig"
+API_KEY = INSERT_API_KEY_HERE
+
+// App Settings
+APP_NAME = Search Movies - Dev
+APP_BUNDLE_ID = com.njg.SearchMovies.Dev
+BASE_URL = http:/$()/api.themoviedb.org/
+AUTH = Enter type of authentication here

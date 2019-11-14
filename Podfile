@@ -10,14 +10,20 @@ pod 'Alamofire'
 pod 'Nuke', '~> 7.5.2'
 pod 'IQKeyboardManagerSwift', '~> 6.2.0'
 pod 'SwiftSpinner'
-  target 'SearchMoviesTests' do
-    inherit! :search_paths
-    # Pods for testing
+  target 'SearchMovies - Dev' do
+    use_frameworks!
+    pod 'Alamofire'
+    pod 'Nuke', '~> 7.5.2'
+    pod 'IQKeyboardManagerSwift', '~> 6.2.0'
+    pod 'SwiftSpinner'
   end
 
-  target 'SearchMoviesUITests' do
-    inherit! :search_paths
-    # Pods for testing
+  target 'SearchMovies - Staging' do
+    use_frameworks!
+    pod 'Alamofire'
+    pod 'Nuke', '~> 7.5.2'
+    pod 'IQKeyboardManagerSwift', '~> 6.2.0'
+    pod 'SwiftSpinner'
   end
 
 end

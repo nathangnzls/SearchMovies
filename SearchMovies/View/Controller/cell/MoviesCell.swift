@@ -23,7 +23,7 @@ class MoviesCell: UITableViewCell {
             Nuke.loadImage(with: url, into: self.posterImg)
             Nuke.loadImage(with: url, into: self.blurredImage)
             self.title.text = results?.title
-            self.releaseDateAndRatings.text = "Release date and rating: \(results?.release_date ?? "") - \(results?.vote_average ?? 0.0)"
+            self.releaseDateAndRatings.text = "\(Constants.releaseDateAndRatings)\(results?.release_date ?? "") - \(results?.vote_average ?? 0.0)"
             self.overview.text = results?.overview
         }
     }

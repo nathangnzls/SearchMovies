@@ -10,10 +10,12 @@ import UIKit
 typealias resquestCompleted =  (_ message:String, _ data: Any?, _ error: NSError?)-> Void
 typealias viewModelCompleted = (_ message: String , _ error : Error?) -> Void
 class Constants: NSObject {
-    static let BASE_URL =  "http://api.themoviedb.org/"
+    static let BASE_URL = Environment.baseURL
     static let PATH_MOVIES = "3/search/movie?api_key="
     static let API_KEY = "4b951e36d117bbc88ac54eccece53258"
     static let PATH_IMAGE_BASE_URL = "https://image.tmdb.org/t/p/original"
+    
+    static let releaseDateAndRatings = "Release date and rating: "
 }
 struct alertsMessage{
     static let internetRequired = "An internet connection is required."
