@@ -11,6 +11,7 @@ import UIKit
 class SuggestionCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var suggestionBtn: UIButton!
+    var onButtonTapped : (() -> Void)? = nil
     var searchMovies : String? {
         didSet{
             self.suggestionBtn.setTitle(searchMovies ?? "", for: .normal)
@@ -19,5 +20,10 @@ class SuggestionCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+    }
+    @IBAction func buttonTapped(_ sender: Any) {
+        if let onButtonTapped = self.onButtonTapped {
+            onButtonTapped()
+        }
     }
 }

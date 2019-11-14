@@ -15,9 +15,7 @@ class MoviesViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     var viewModel = MoviesViewModel()
     var loadMoreControl: LoadMoreControl?
-    var searchedMovie = [String](repeating: "asd", count: 10)
     var index = 1
-    var search = ""
     let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
@@ -51,9 +49,9 @@ class MoviesViewController: BaseViewController {
         self.searchController.hidesNavigationBarDuringPresentation = false
         self.searchController.dimsBackgroundDuringPresentation = true
         self.searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = placeHolder.searchView
-        searchController.searchBar.sizeToFit()
-        searchController.searchBar.becomeFirstResponder()
+        self.searchController.searchBar.placeholder = placeHolder.searchView
+        self.searchController.searchBar.sizeToFit()
+        self.searchController.searchBar.becomeFirstResponder()
     }
     func fetchMovies(movieName: String?, pageNum: Int){
          if Reachability.isConnectedToNetwork(){
@@ -82,16 +80,12 @@ extension MoviesViewController: UISearchControllerDelegate, UISearchBarDelegate,
             self.index = 1
             self.viewModel.tempData?.removeAll()
             self.fetchMovies(movieName: searchBar.text ?? "", pageNum: index)
-            self.search = searchBar.text ?? ""
-            if(!self.searchedMovie.contains(searchBar.text ?? "")){
-                self.searchedMovie.append(searchBar.text ?? "")
-            }
         }else{
             SwiftSpinner.show(duration: 2.0, title: alertsMessage.noInternetConecction ,animated: false)
         }
     }
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
-        if self.searchedMovie.count != 0{
+        if self.viewModel.searchedMovie.count != 0{
             UIView.animate(withDuration: 0.8) {
                 self.suggestionViewHolderHeight.constant = 110
             }
@@ -122,7 +116,7 @@ extension MoviesViewController: UITableViewDelegate, UITableViewDataSource, UISc
         DispatchQueue.global(qos: .utility).async {
             for _ in 1..<2 {
                 self.index += 1
-                self.fetchMovies(movieName: self.search, pageNum: self.index)
+                self.fetchMovies(movieName: self.searchController.searchBar.text, pageNum: self.index)
                 sleep(1)
             }
             DispatchQueue.main.async { [weak self] in
@@ -136,7 +130,7 @@ extension MoviesViewController: UITableViewDelegate, UITableViewDataSource, UISc
 
 extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return self.searchedMovie.count
+        return self.viewModel.searchedMovie.count
         }
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: nibIds.suggestionID, for: indexPath) as? SuggestionCollectionViewCell else { return UICollectionViewCell() }
@@ -144,12 +138,15 @@ extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDataSo
            DispatchQueue.main.async {
                collectionView.collectionViewLayout.invalidateLayout()
            }
-            cell.searchMovies = self.searchedMovie[indexPath.row]
+            cell.searchMovies = self.viewModel.searchedMovie[indexPath.row]
+            cell.onButtonTapped = {
+                self.searchController.searchBar.text = self.viewModel.searchedMovie[indexPath.row]
+            }
             return cell
         }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             let label = UILabel(frame: CGRect.zero)
-            label.text = self.searchedMovie[indexPath.row]
+        label.text = self.viewModel.searchedMovie[indexPath.row]
             label.sizeToFit()
             return CGSize(width: label.frame.width+10, height: 32)
     }
