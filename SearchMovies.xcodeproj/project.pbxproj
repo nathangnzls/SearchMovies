@@ -29,7 +29,6 @@
 		D8E78AAA237CDC86005CF76E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8EC79B22378EEBD00181821 /* Assets.xcassets */; };
 		D8E78AAB237CDC86005CF76E /* SuggestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8EC79FE237A9F9E00181821 /* SuggestionCell.xib */; };
 		D8E78AAC237CDC86005CF76E /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8EC79F52379567F00181821 /* MovieCell.xib */; };
-		D8E78AAD237CDC86005CF76E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8EC79AF2378EEB400181821 /* Main.storyboard */; };
 		D8E78AB7237CDC92005CF76E /* ResultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EC79E6237937EE00181821 /* ResultsModel.swift */; };
 		D8E78AB8237CDC92005CF76E /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EC79DE2378F28300181821 /* APIHandler.swift */; };
 		D8E78AB9237CDC92005CF76E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EC79A92378EEB400181821 /* AppDelegate.swift */; };
@@ -49,10 +48,20 @@
 		D8E78ACA237CDC92005CF76E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8EC79B22378EEBD00181821 /* Assets.xcassets */; };
 		D8E78ACB237CDC92005CF76E /* SuggestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8EC79FE237A9F9E00181821 /* SuggestionCell.xib */; };
 		D8E78ACC237CDC92005CF76E /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8EC79F52379567F00181821 /* MovieCell.xib */; };
-		D8E78ACD237CDC92005CF76E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8EC79AF2378EEB400181821 /* Main.storyboard */; };
+		D8E78AE1237D0AB1005CF76E /* BridgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E78AE0237D0AB1005CF76E /* BridgeViewController.swift */; };
+		D8E78AE2237D0AB1005CF76E /* BridgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E78AE0237D0AB1005CF76E /* BridgeViewController.swift */; };
+		D8E78AE3237D0AB1005CF76E /* BridgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E78AE0237D0AB1005CF76E /* BridgeViewController.swift */; };
+		D8E78AE5237D0AD5005CF76E /* BridgeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E78AE4237D0AD5005CF76E /* BridgeVM.swift */; };
+		D8E78AE6237D0AD5005CF76E /* BridgeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E78AE4237D0AD5005CF76E /* BridgeVM.swift */; };
+		D8E78AE7237D0AD5005CF76E /* BridgeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E78AE4237D0AD5005CF76E /* BridgeVM.swift */; };
+		D8E78AE9237D0AFE005CF76E /* Bridge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8E78AE8237D0AFE005CF76E /* Bridge.storyboard */; };
+		D8E78AEA237D0AFE005CF76E /* Bridge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8E78AE8237D0AFE005CF76E /* Bridge.storyboard */; };
+		D8E78AEB237D0AFE005CF76E /* Bridge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8E78AE8237D0AFE005CF76E /* Bridge.storyboard */; };
+		D8E78AEC237D4DF7005CF76E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8EC79AF2378EEB400181821 /* Main.storyboard */; };
+		D8E78AED237D4E00005CF76E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8EC79AF2378EEB400181821 /* Main.storyboard */; };
+		D8E78AEE237D4E0A005CF76E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8EC79AF2378EEB400181821 /* Main.storyboard */; };
 		D8EC79AA2378EEB400181821 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EC79A92378EEB400181821 /* AppDelegate.swift */; };
 		D8EC79AC2378EEB400181821 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EC79AB2378EEB400181821 /* SceneDelegate.swift */; };
-		D8EC79B12378EEB400181821 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8EC79AF2378EEB400181821 /* Main.storyboard */; };
 		D8EC79B32378EEBD00181821 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8EC79B22378EEBD00181821 /* Assets.xcassets */; };
 		D8EC79B62378EEBD00181821 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8EC79B42378EEBD00181821 /* LaunchScreen.storyboard */; };
 		D8EC79DF2378F28300181821 /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EC79DE2378F28300181821 /* APIHandler.swift */; };
@@ -84,7 +93,7 @@
 		61B6EB5D0A2946E55B9C5D52 /* Pods_SearchMoviesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchMoviesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62C6F5640DACC391430A277A /* Pods-SearchMovies-SearchMovies - Dev.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchMovies-SearchMovies - Dev.staging.xcconfig"; path = "Target Support Files/Pods-SearchMovies-SearchMovies - Dev/Pods-SearchMovies-SearchMovies - Dev.staging.xcconfig"; sourceTree = "<group>"; };
 		B1DF9574840D2F13710600C9 /* Pods-SearchMoviesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchMoviesTests.debug.xcconfig"; path = "Target Support Files/Pods-SearchMoviesTests/Pods-SearchMoviesTests.debug.xcconfig"; sourceTree = "<group>"; };
-		C1E2805712F1364174632CBA /* Pods_SearchMovies_SearchMovies___Staging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchMovies_SearchMovies___Staging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1E2805712F1364174632CBA /* Pods_SearchMovies_SearchMovies___Staging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_SearchMovies_SearchMovies___Staging.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC0AC0C16C5E5602D6C51A02 /* Pods-SearchMovies-SearchMovies - Dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchMovies-SearchMovies - Dev.debug.xcconfig"; path = "Target Support Files/Pods-SearchMovies-SearchMovies - Dev/Pods-SearchMovies-SearchMovies - Dev.debug.xcconfig"; sourceTree = "<group>"; };
 		CE732FC7811CCEFA04083AA5 /* Pods-SearchMovies-SearchMovies - Staging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchMovies-SearchMovies - Staging.release.xcconfig"; path = "Target Support Files/Pods-SearchMovies-SearchMovies - Staging/Pods-SearchMovies-SearchMovies - Staging.release.xcconfig"; sourceTree = "<group>"; };
 		CE7E4BFE3C71B4FE6E6E201C /* Pods-SearchMovies-SearchMovies - Dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchMovies-SearchMovies - Dev.release.xcconfig"; path = "Target Support Files/Pods-SearchMovies-SearchMovies - Dev/Pods-SearchMovies-SearchMovies - Dev.release.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +106,9 @@
 		D8E78AD5237CDDB3005CF76E /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		D8E78AD6237CDDC5005CF76E /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
 		D8E78AD7237CDDD1005CF76E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		D8E78AE0237D0AB1005CF76E /* BridgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeViewController.swift; sourceTree = "<group>"; };
+		D8E78AE4237D0AD5005CF76E /* BridgeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeVM.swift; sourceTree = "<group>"; };
+		D8E78AE8237D0AFE005CF76E /* Bridge.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bridge.storyboard; sourceTree = "<group>"; };
 		D8EC79A62378EEB400181821 /* SearchMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8EC79A92378EEB400181821 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8EC79AB2378EEB400181821 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,7 +136,7 @@
 		D8EC79FE237A9F9E00181821 /* SuggestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionCell.xib; sourceTree = "<group>"; };
 		D9802AEDFEE8261C9FB6CDB0 /* Pods_SearchMovies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchMovies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E82B6514836CB8A72959AEE2 /* Pods-SearchMoviesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchMoviesUITests.release.xcconfig"; path = "Target Support Files/Pods-SearchMoviesUITests/Pods-SearchMoviesUITests.release.xcconfig"; sourceTree = "<group>"; };
-		EB7DB1C6BB3240503E750FB2 /* Pods_SearchMovies_SearchMovies___Dev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SearchMovies_SearchMovies___Dev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB7DB1C6BB3240503E750FB2 /* Pods_SearchMovies_SearchMovies___Dev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_SearchMovies_SearchMovies___Dev.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F02579968354A5E2472977C2 /* Pods-SearchMovies-SearchMovies - Staging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchMovies-SearchMovies - Staging.debug.xcconfig"; path = "Target Support Files/Pods-SearchMovies-SearchMovies - Staging/Pods-SearchMovies-SearchMovies - Staging.debug.xcconfig"; sourceTree = "<group>"; };
 		FB5006917455EB7CC408A755 /* Pods-SearchMovies.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SearchMovies.development.xcconfig"; path = "Target Support Files/Pods-SearchMovies/Pods-SearchMovies.development.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -269,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				D8EC79F023793E3200181821 /* MoviesViewModel.swift */,
+				D8E78AE4237D0AD5005CF76E /* BridgeVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -316,6 +329,7 @@
 				D8EC79F72379569400181821 /* cell */,
 				D8EC79EC23793CB200181821 /* MoviesViewController.swift */,
 				D8EC79EE23793CBF00181821 /* BaseViewController.swift */,
+				D8E78AE0237D0AB1005CF76E /* BridgeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -324,6 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				D8EC79AF2378EEB400181821 /* Main.storyboard */,
+				D8E78AE8237D0AFE005CF76E /* Bridge.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -469,11 +484,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8E78AED237D4E00005CF76E /* Main.storyboard in Resources */,
 				D8E78AA9237CDC86005CF76E /* LaunchScreen.storyboard in Resources */,
 				D8E78AAA237CDC86005CF76E /* Assets.xcassets in Resources */,
 				D8E78AAB237CDC86005CF76E /* SuggestionCell.xib in Resources */,
 				D8E78AAC237CDC86005CF76E /* MovieCell.xib in Resources */,
-				D8E78AAD237CDC86005CF76E /* Main.storyboard in Resources */,
+				D8E78AEA237D0AFE005CF76E /* Bridge.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,11 +497,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8E78AEC237D4DF7005CF76E /* Main.storyboard in Resources */,
 				D8E78AC9237CDC92005CF76E /* LaunchScreen.storyboard in Resources */,
 				D8E78ACA237CDC92005CF76E /* Assets.xcassets in Resources */,
 				D8E78ACB237CDC92005CF76E /* SuggestionCell.xib in Resources */,
 				D8E78ACC237CDC92005CF76E /* MovieCell.xib in Resources */,
-				D8E78ACD237CDC92005CF76E /* Main.storyboard in Resources */,
+				D8E78AEB237D0AFE005CF76E /* Bridge.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,11 +510,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8E78AEE237D4E0A005CF76E /* Main.storyboard in Resources */,
 				D8EC79B62378EEBD00181821 /* LaunchScreen.storyboard in Resources */,
 				D8EC79B32378EEBD00181821 /* Assets.xcassets in Resources */,
 				D8EC79FF237A9F9E00181821 /* SuggestionCell.xib in Resources */,
 				D8EC79F62379567F00181821 /* MovieCell.xib in Resources */,
-				D8EC79B12378EEB400181821 /* Main.storyboard in Resources */,
+				D8E78AE9237D0AFE005CF76E /* Bridge.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,6 +647,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8E78A97237CDC86005CF76E /* ResultsModel.swift in Sources */,
+				D8E78AE2237D0AB1005CF76E /* BridgeViewController.swift in Sources */,
 				D8E78A98237CDC86005CF76E /* APIHandler.swift in Sources */,
 				D8E78A99237CDC86005CF76E /* AppDelegate.swift in Sources */,
 				D8E78A9A237CDC86005CF76E /* Results.swift in Sources */,
@@ -640,6 +659,7 @@
 				D8E78AA0237CDC86005CF76E /* SceneDelegate.swift in Sources */,
 				D8E78AA1237CDC86005CF76E /* Reachability.swift in Sources */,
 				D8E78AA2237CDC86005CF76E /* Constants.swift in Sources */,
+				D8E78AE6237D0AD5005CF76E /* BridgeVM.swift in Sources */,
 				D8E78AA3237CDC86005CF76E /* MoviesViewController.swift in Sources */,
 				D8E78AA4237CDC86005CF76E /* MoviesCell.swift in Sources */,
 				D8E78AA5237CDC86005CF76E /* MoviesViewModel.swift in Sources */,
@@ -651,6 +671,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8E78AB7237CDC92005CF76E /* ResultsModel.swift in Sources */,
+				D8E78AE3237D0AB1005CF76E /* BridgeViewController.swift in Sources */,
 				D8E78AB8237CDC92005CF76E /* APIHandler.swift in Sources */,
 				D8E78AB9237CDC92005CF76E /* AppDelegate.swift in Sources */,
 				D8E78ABA237CDC92005CF76E /* Results.swift in Sources */,
@@ -662,6 +683,7 @@
 				D8E78AC0237CDC92005CF76E /* SceneDelegate.swift in Sources */,
 				D8E78AC1237CDC92005CF76E /* Reachability.swift in Sources */,
 				D8E78AC2237CDC92005CF76E /* Constants.swift in Sources */,
+				D8E78AE7237D0AD5005CF76E /* BridgeVM.swift in Sources */,
 				D8E78AC3237CDC92005CF76E /* MoviesViewController.swift in Sources */,
 				D8E78AC4237CDC92005CF76E /* MoviesCell.swift in Sources */,
 				D8E78AC5237CDC92005CF76E /* MoviesViewModel.swift in Sources */,
@@ -673,6 +695,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8EC79E7237937EE00181821 /* ResultsModel.swift in Sources */,
+				D8E78AE1237D0AB1005CF76E /* BridgeViewController.swift in Sources */,
 				D8EC79DF2378F28300181821 /* APIHandler.swift in Sources */,
 				D8EC79AA2378EEB400181821 /* AppDelegate.swift in Sources */,
 				D8EC79E923793A1600181821 /* Results.swift in Sources */,
@@ -684,6 +707,7 @@
 				D8EC79AC2378EEB400181821 /* SceneDelegate.swift in Sources */,
 				D8EC79F323793FC800181821 /* Reachability.swift in Sources */,
 				D8EC79E12378F2E200181821 /* Constants.swift in Sources */,
+				D8E78AE5237D0AD5005CF76E /* BridgeVM.swift in Sources */,
 				D8EC79ED23793CB200181821 /* MoviesViewController.swift in Sources */,
 				D8EC79F9237956A500181821 /* MoviesCell.swift in Sources */,
 				D8EC79F123793E3200181821 /* MoviesViewModel.swift in Sources */,
@@ -797,7 +821,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -912,7 +936,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1027,7 +1051,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

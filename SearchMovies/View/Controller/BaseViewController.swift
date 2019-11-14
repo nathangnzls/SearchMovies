@@ -32,7 +32,31 @@ class BaseViewController: UIViewController {
         alertController.addAction(action1)
         self.present(alertController, animated: true, completion: nil)
     }
-
+    @objc func showMain(){
+        let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainSB") as UIViewController
+        viewController.modalPresentationStyle = .fullScreen
+        if #available(iOS 13.0, *) {
+            viewController.isModalInPresentation = true // available in IOS13
+        }
+        //UIApplication.topViewController(viewController: viewController)?.present(viewController, animated: true, completion: nil)
+        self.present(viewController, animated: true, completion: nil)
+    }
+}
+extension UIApplication {
+    class func topViewController(viewController: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+        if let nav = viewController as? UINavigationController {
+            return topViewController(viewController: nav.visibleViewController)
+        }
+        if let tab = viewController as? UITabBarController {
+            if let selected = tab.selectedViewController {
+                return topViewController(viewController: selected)
+            }
+        }
+        if let presented = viewController?.presentedViewController {
+            return topViewController(viewController: presented)
+        }
+        return viewController
+    }
 }
 enum AlertAction{
     case okButton

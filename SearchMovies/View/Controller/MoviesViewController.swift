@@ -116,7 +116,7 @@ extension MoviesViewController: UITableViewDelegate, UITableViewDataSource, UISc
         DispatchQueue.global(qos: .utility).async {
             for _ in 1..<2 {
                 self.index += 1
-                self.fetchMovies(movieName: self.searchController.searchBar.text, pageNum: self.index)
+                self.fetchMovies(movieName: self.searchController.searchBar.text ?? "", pageNum: self.index)
                 sleep(1)
             }
             DispatchQueue.main.async { [weak self] in
@@ -134,10 +134,6 @@ extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDataSo
         }
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: nibIds.suggestionID, for: indexPath) as? SuggestionCollectionViewCell else { return UICollectionViewCell() }
-            cell.layoutSubviews()
-           DispatchQueue.main.async {
-               collectionView.collectionViewLayout.invalidateLayout()
-           }
             cell.searchMovies = self.viewModel.searchedMovie[indexPath.row]
             cell.onButtonTapped = {
                 self.searchController.searchBar.text = self.viewModel.searchedMovie[indexPath.row]
