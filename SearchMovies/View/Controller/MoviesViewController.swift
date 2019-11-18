@@ -9,7 +9,6 @@
 import UIKit
 import SwiftSpinner
 class MoviesViewController: BaseViewController {
-
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var suggestionViewHolderHeight: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
@@ -80,6 +79,7 @@ extension MoviesViewController: UISearchControllerDelegate, UISearchBarDelegate,
             self.index = 1
             self.viewModel.tempData?.removeAll()
             self.fetchMovies(movieName: searchBar.text ?? "", pageNum: index)
+            self.viewModel.movName = self.searchController.searchBar.text ?? ""
         }else{
             SwiftSpinner.show(duration: 2.0, title: alertsMessage.noInternetConecction ,animated: false)
         }
@@ -116,7 +116,7 @@ extension MoviesViewController: UITableViewDelegate, UITableViewDataSource, UISc
         DispatchQueue.global(qos: .utility).async {
             for _ in 1..<2 {
                 self.index += 1
-                self.fetchMovies(movieName: self.searchController.searchBar.text ?? "", pageNum: self.index)
+                self.fetchMovies(movieName: self.viewModel.movName, pageNum: self.index)
                 sleep(1)
             }
             DispatchQueue.main.async { [weak self] in

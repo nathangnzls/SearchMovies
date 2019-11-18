@@ -9,6 +9,11 @@
 import UIKit
 
 class MoviesViewModel: NSObject {
+    var movName : String = ""{
+        didSet{
+            
+        }
+    }
     var resultsModel: ResultsModel?
     var tempModel: [Results]?
     var tempData : [Results]? = []
